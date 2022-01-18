@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A   
+[A    node {
+[A[C[C[C[C[C[C[C[C[C[Csh 'gradle help --scan' } findBuildScans()[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B
+
