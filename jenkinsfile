@@ -1,6 +1,11 @@
 pipeline {
     agent any
-
+    
+    node {
+       sh 'gradle help --scan'
+    }
+    findBuilScan()
+    
     stages {
         stage('Build') {
             steps {
@@ -18,7 +23,5 @@ pipeline {
             }
         }
     }
-}[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A   
-[A    node {
-[A[C[C[C[C[C[C[C[C[C[Csh 'gradle help --scan' } findBuildScans()[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B[B
+}
 
