@@ -11,13 +11,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'gradle help --scan'
+                sh 'ls -ali'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'gradle clean compileJava test'
+                sh 'ps -aux'
             }
         }
     }
