@@ -1,10 +1,6 @@
 pipeline {
     agent any
-    node {
-       sh 'gradle help --scan'
-    }
-    findBuilScan()
-    
+     
     stages {
         stage('Build') {
             steps {
