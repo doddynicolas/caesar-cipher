@@ -16,8 +16,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'ls -ali'
-                
-                
+                      
             }
         }
         stage('Deploy') {
@@ -25,7 +24,6 @@ pipeline {
                 echo 'Deploying....'
                 sh 'ps -aux'
                 
-
             }
         }
     }
