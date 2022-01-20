@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'ls -ali'
-                ./gradlew build --scan
+                
                 
             }
         }
