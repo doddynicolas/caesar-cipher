@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'doddy'
+                sh './gradlew tasks --all'
            }
         }
         stage('Test') {
@@ -23,7 +24,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'ps -aux'
-                
+                sh './gradlew clean build'
             }
         }
     }
