@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'doddy'
-                sudo sh './gradlew tasks --all'
+                sh './gradlew tasks --all'
            }
         }
         stage('Test') {
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'ps -aux'
-                sudo sh './gradlew clean build'
+                sh './gradlew clean build'
             }
         }
     }
