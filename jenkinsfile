@@ -1,14 +1,15 @@
 pipeline {
     agent any
     
-  
+      tools{
+        gradle 'Gradle1'
+    }
     
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '0cb5f4bf-f654-4525-83b5-fc61f61ce545', url: 'git@github.com:doddynicolas/caesar-cipher.git']]])
-            }
+           }
         }
         stage('Test') {
             steps {
