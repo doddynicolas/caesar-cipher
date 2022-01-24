@@ -16,14 +16,14 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls -ali'
-                sh './gradlew clean build'      
+                sh 'gradle clean build'      
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
                 sh 'ps -aux'
-                sh './gradlew clean build'
+                sh 'gradle clean build'
             }
         }
     }
