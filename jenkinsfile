@@ -6,17 +6,15 @@ pipeline {
     }
     
     stages {
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'gradle test'
+           }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
-                echo 'doddy'
-                sh 'chmod +x gradlew'
-                sh './gradlew tasks --all'
-           }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
                 sh 'ls -ali'
                 sh './gradlew clean build'      
             }
